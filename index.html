@@ -1,0 +1,928 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Language" content="en">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+
+     
+<link href="https://fonts.googleapis.com/css?family=Montserrat:900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Prompt:700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:300,400,700,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">	
+<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+	
+<link href="https://fonts.googleapis.com/css?family=Montserrat:900" rel="stylesheet">   
+    
+<link rel="icon" href="index.ico" type="image/x-icon" />
+	
+<title>dStreak | Daraz.lk</title>   
+<style>
+.modal-backdrop {
+  z-index: 0 !important;
+}
+</style>
+</head> 
+	
+<body style="font-family: 'Montserrat', sans-serif !important;">
+<img src="Artboard 1.jpg" class="img-responsive">
+
+<div class="container">
+<div class="row">
+	<div class="col-md-12 col-xs-12 col-sm-12">
+		
+		<div style="margin:20px;"></div>
+		
+		<div class="col-xs-12">
+            
+        <div class="text-center">
+        <a href="" data-toggle="modal" data-target="#myModal"><b style="font-weight: 800;text-transform: uppercase;color: #9e00ff;">Find How to complete your streak &nbsp;<i class="fas fa-external-link-alt"></i></b></a>
+        </div>
+            
+		<img src="calendar.png" class="img-responsive" style="object-fit: contain;width: 100%;">
+		</div>
+        
+        	<div class="col-xs-12">
+			<div style="margin:30px;"></div>
+            <form>
+               <div class="form-group">
+                <label for="exampleInputEmail1">Daraz Email</label>
+                <input type="text" class="form-control" id="formValueId" placeholder="- Enter your daraz email -" name="valueId" style="font-weight: 300;font-size: 13px;">
+                </div>
+                 <div class="form-group">
+                     <input type="button" class="btn btn-primary btn-block" style="font-weight: 600;" onclick="foo(valueId.value)"value="SUBMIT">
+                </div>
+            </form>
+            <div style="margin:10px;"></div>
+            <p style="color: #777777;font-size: 13px;" class="text-center"><i>Enter your email address to see your streak progress</i></p>
+		</div>
+        
+		<div class="col-xs-12">
+			<div style="margin:40px;"></div>
+		</div>
+		
+        <div id="dStreakmonth">
+            
+		<div class="col-xs-4">
+			<div class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;background-color: black;color: white;" onclick="check_month_01()" id="thumb_month_01">
+				<div class="row">
+					<div class="col-xs-12">	
+				 		<h3 class="text-center" style="font-size: 16px;font-weight: 600;margin-top: 10px;">JUL</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-xs-4">
+			<div class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;display: none;"  onclick="check_month_02()" id="thumb_month_02">
+				<div class="row">
+					<div class="col-xs-12">	
+				 		<h3 class="text-center" style="font-size: 16px;font-weight: 600;margin-top: 10px;">AUG</h3>
+					</div>
+				</div>
+			</div>
+            
+            <img src="lockred.png" class="img-responsive center-block" style="height: 39px;position: absolute;margin-left: 33px;margin-top: -28px;background: #f1f1f1;border-radius: 19px;padding: 5px;display: block;" id="thumb_month_02_none_img">
+            <div class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;" id="thumb_month_02_none">
+				<div class="row">
+					<div class="col-xs-12">	
+				 		<h3 class="text-center" style="font-size: 16px;font-weight: 600;margin-top: 10px;    opacity: 0.4;">AUG</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-xs-4">
+			<div class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;display: none;"  onclick="check_month_03()" id="thumb_month_03">
+				<div class="row">
+					<div class="col-xs-12">	
+				 		<h3 class="text-center" style="font-size: 16px;font-weight: 600;margin-top: 10px;">SEP</h3>
+					</div>
+				</div>
+			</div>
+            
+            <img src="lockred.png" class="img-responsive center-block" style="height: 39px;position: absolute;margin-left: 33px;margin-top: -28px;background: #f1f1f1;border-radius: 19px;padding: 5px;display: block;" id="thumb_month_03_none_img">
+            <div class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;" id="thumb_month_03_none">
+				<div class="row">
+					<div class="col-xs-12">	
+				 		<h3 class="text-center" style="font-size: 16px;font-weight: 600;margin-top: 10px;opacity: 0.4;">SEP</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+          
+        <div class="row">
+            <div class="col-md-12 col-xs-12 col-sm-12">
+                <div style="margin:20px;"></div>
+                <p class="text-center" style="font-weight: 700;text-transform: uppercase;"><text style="background: #ffeb3b;padding: 10px;">Total Streaks - <text id="greeting" ></text></text></p>
+                <div style="margin:30px;"></div>
+                <p class="text-center" style="font-size: 13px;color: gray;">Please shop between 1st - 15th every month to win rewards. </p>
+                <!-- <p id="demo"></p> -->
+                <div style="margin:30px;"></div>
+            </div>
+        </div>
+            
+		</div>
+        
+	</div>
+</div>
+	
+
+</div>
+	
+<div id="dStreakprogress">
+    
+<div id="month_01" class="col-md-12 col-xs-12 col-sm-12"  style="background:#f6f6f9;">
+		<div style="margin:40px;"></div>
+	
+    <!-- First Task -->
+		<div id="mission_01_not_completed" class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;height: 40px;">
+				<div class="row">
+					<div class="col-xs-12">	
+						<div class="col-xs-2">
+                            <img src="icons/2dmart.png" class="img-responsive" style="height: 35px;margin-left: -12px;margin-top: -3px;">
+						</div>
+						<div class="col-xs-10">
+							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Visit dMart Page for 2 days</p>
+						</div>
+					</div>
+				</div>
+			</div>
+    
+            <div id="mission_01_completed" class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;height: 40px;border: 2px solid #41ad49;display:none;">
+				<div class="row">
+					<div class="col-xs-12">	
+						<div class="col-xs-2">
+							 <img src="icons/2dmart.png" class="img-responsive" style="height: 35px;margin-left: -12px;margin-top: -3px;">
+						</div>
+						<div class="col-xs-8">
+							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Visit dMart Page for 2 days</p>
+						</div>
+						<div class="col-xs-2">
+							<img src="check.png" class="img-responsive" style="height: 42px;width: 100%;object-fit: contain;margin-top: -7px;margin-left: 14px;">
+						</div>
+					</div>
+				</div>
+			</div>
+	 <!-- First Task End -->
+    
+     <!-- Second Task -->
+			<div id="mission_02_not_completed"  class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;height: 40px;">
+				<div class="row">
+					<div class="col-xs-12">	
+						<div class="col-xs-2">
+							  <img src="icons/atc.png" class="img-responsive" style="height: 35px;margin-left: -12px;margin-top: -3px;">
+						</div>
+						<div class="col-xs-10">
+							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Add 7 dMart Products to the Cart</p>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+           <div id="mission_02_completed"  class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;height: 40px;border: 2px solid #41ad49;display:none;">
+				<div class="row">
+					<div class="col-xs-12">	
+						<div class="col-xs-2">
+							  <img src="icons/atc.png" class="img-responsive" style="height: 35px;margin-left: -12px;margin-top: -3px;">
+						</div>
+						<div class="col-xs-8">
+							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Add 7 dMart Products to the Cart</p>
+						</div>
+                        <div class="col-xs-2">
+							<img src="check.png" class="img-responsive" style="height: 42px;width: 100%;object-fit: contain;margin-top: -7px;margin-left: 14px;">
+						</div>
+					</div>
+				</div>
+			</div>
+    
+     <!-- Second Task End -->
+    
+    <!-- Third Task -->
+			<div id="mission_03_not_completed"  class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;height: 40px;">
+				<div class="row">
+					<div class="col-xs-12">	
+						<div class="col-xs-2">
+							  <img src="icons/order.png" class="img-responsive" style="height: 35px;margin-left: -12px;margin-top: -3px;">
+						</div>
+						<div class="col-xs-10">
+							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Place an order on dMart</p>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+           <div id="mission_03_completed"  class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;height: 40px;border: 2px solid #41ad49;display:none;">
+				<div class="row">
+					<div class="col-xs-12">	
+						<div class="col-xs-2">
+				            <img src="icons/order.png" class="img-responsive" style="height: 35px;margin-left: -12px;margin-top: -3px;">
+						</div>
+						<div class="col-xs-8">
+							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Place an order on dMart</p>
+						</div>
+                        <div class="col-xs-2">
+							<img src="check.png" class="img-responsive" style="height: 42px;width: 100%;object-fit: contain;margin-top: -7px;margin-left: 14px;">
+						</div>
+					</div>
+				</div>
+			</div>
+    
+     <!-- Third Task End -->
+    
+     <!-- Fourth Task -->
+			<div id="mission_04_not_completed"  class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;height: 40px;">
+				<div class="row">
+					<div class="col-xs-12">	
+						<div class="col-xs-2">
+							  <img src="icons/review.png" class="img-responsive" style="height: 35px;margin-left: -12px;margin-top: -3px;">
+						</div>
+						<div class="col-xs-10">
+							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Share 2 dMart Products with friends</p>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+           <div id="mission_04_completed"  class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;height: 40px;border: 2px solid #41ad49;display:none;">
+				<div class="row">
+					<div class="col-xs-12">	
+						<div class="col-xs-2">
+						  <img src="icons/review.png" class="img-responsive" style="height: 35px;margin-left: -12px;margin-top: -3px;">
+						</div>
+						<div class="col-xs-8">
+							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Share 2 dMart Products with friends</p>
+						</div>
+                        <div class="col-xs-2">
+							<img src="check.png" class="img-responsive" style="height: 42px;width: 100%;object-fit: contain;margin-top: -7px;margin-left: 14px;">
+						</div>
+					</div>
+				</div>
+			</div>
+    
+     <!-- Fourth Task End -->
+    
+     <!-- Fifth Task -->
+			<div id="mission_05_not_completed"  class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;height: 40px;">
+				<div class="row">
+					<div class="col-xs-12">	
+						<div class="col-xs-2">
+							  <img src="icons/stores.png" class="img-responsive" style="height: 35px;margin-left: -12px;margin-top: -3px;">
+						</div>
+						<div class="col-xs-10">
+							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Follow Unilever brand store</p>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+           <div id="mission_05_completed"  class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;height: 40px;border: 2px solid #41ad49;display:none;">
+				<div class="row">
+					<div class="col-xs-12">	
+						<div class="col-xs-2">
+							  <img src="icons/stores.png" class="img-responsive" style="height: 35px;margin-left: -12px;margin-top: -3px;">
+						</div>
+						<div class="col-xs-8">
+							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Follow Unilever brand store</p>
+						</div>
+                        <div class="col-xs-2">
+							<img src="check.png" class="img-responsive" style="height: 42px;width: 100%;object-fit: contain;margin-top: -7px;margin-left: 14px;">
+						</div>
+					</div>
+				</div>
+			</div>
+    
+     <!-- Fifth Task End -->
+    
+    
+     
+</div>
+    
+<div id="month_02" class="col-md-12 col-xs-12 col-sm-12" style="display: none;background:#f6f6f9;">
+		<div style="margin:40px;"></div>
+	
+    <!-- First Task -->
+		<div id="02_mission_01_not_completed" class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;height: 40px;display:none;">
+				<div class="row">
+					<div class="col-xs-12">	
+						<div class="col-xs-2">
+							<i class="far fa-lightbulb" style="font-size: 28px;margin-left: -8px;color: #ff5614;"></i>
+						</div>
+						<div class="col-xs-10">
+							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Visit dMart Page for 2 days</p>
+						</div>
+					</div>
+				</div>
+			</div>
+    
+            <div id="02_mission_01_completed" class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;height: 40px;border: 2px solid #41ad49;display:none;">
+				<div class="row">
+					<div class="col-xs-12">	
+						<div class="col-xs-2">
+							<i class="far fa-lightbulb" style="font-size: 28px;margin-left: -8px;color: #ff5614;"></i>
+						</div>
+						<div class="col-xs-8">
+							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Visit dMart Page for 2 days</p>
+						</div>
+						<div class="col-xs-2">
+							<img src="check.png" class="img-responsive" style="height: 42px;width: 100%;object-fit: contain;margin-top: -7px;margin-left: 14px;">
+						</div>
+					</div>
+				</div>
+			</div>
+	 <!-- First Task End -->
+    
+     <!-- Second Task -->
+			<div id="02_mission_02_not_completed"  class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;height: 40px;display:none;">
+				<div class="row">
+					<div class="col-xs-12">	
+						<div class="col-xs-2">
+							<i class="fas fa-shopping-basket" style="font-size: 28px;margin-left: -8px;color: #ff5614;"></i>
+						</div>
+						<div class="col-xs-10">
+							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Add 7 dMart Products to the Cart</p>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+           <div id="02_mission_02_completed"  class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;height: 40px;border: 2px solid #41ad49;display:none;">
+				<div class="row">
+					<div class="col-xs-12">	
+						<div class="col-xs-2">
+							<i class="fas fa-shopping-basket" style="font-size: 28px;margin-left: -8px;color: #ff5614;"></i>
+						</div>
+						<div class="col-xs-8">
+							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Add 7 dMart Products to the Cart</p>
+						</div>
+                        <div class="col-xs-2">
+							<img src="check.png" class="img-responsive" style="height: 42px;width: 100%;object-fit: contain;margin-top: -7px;margin-left: 14px;">
+						</div>
+					</div>
+				</div>
+			</div>
+    
+     <!-- Second Task End -->
+    
+    <!-- Third Task -->
+			<div id="02_mission_03_not_completed"  class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;height: 40px;display:none;">
+				<div class="row">
+					<div class="col-xs-12">	
+						<div class="col-xs-2">
+							<i class="far fa-credit-card" style="font-size: 28px;margin-left: -8px;color: #ff5614;"></i>
+						</div>
+						<div class="col-xs-10">
+							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Place an order on dMart</p>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+           <div id="02_mission_03_completed"  class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;height: 40px;border: 2px solid #41ad49;display:none;">
+				<div class="row">
+					<div class="col-xs-12">	
+						<div class="col-xs-2">
+							<i class="far fa-credit-card" style="font-size: 28px;margin-left: -8px;color: #ff5614;"></i>
+						</div>
+						<div class="col-xs-8">
+							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Place an order on dMart</p>
+						</div>
+                        <div class="col-xs-2">
+							<img src="check.png" class="img-responsive" style="height: 42px;width: 100%;object-fit: contain;margin-top: -7px;margin-left: 14px;">
+						</div>
+					</div>
+				</div>
+			</div>
+    
+     <!-- Third Task End -->
+    
+     <!-- Fourth Task -->
+			<div id="02_mission_04_not_completed"  class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;height: 40px;display:none;">
+				<div class="row">
+					<div class="col-xs-12">	
+						<div class="col-xs-2">
+							<i class="fas fa-user-friends" style="font-size: 28px;margin-left: -8px;color: #ff5614;"></i>
+						</div>
+						<div class="col-xs-10">
+							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Share 2 dMart Products with friends</p>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+           <div id="02_mission_04_completed"  class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;height: 40px;border: 2px solid #41ad49;display:none;">
+				<div class="row">
+					<div class="col-xs-12">	
+						<div class="col-xs-2">
+							<i class="fas fa-user-friends" style="font-size: 28px;margin-left: -8px;color: #ff5614;"></i>
+						</div>
+						<div class="col-xs-8">
+							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Share 2 dMart Products with friends</p>
+						</div>
+                        <div class="col-xs-2">
+							<img src="check.png" class="img-responsive" style="height: 42px;width: 100%;object-fit: contain;margin-top: -7px;margin-left: 14px;">
+						</div>
+					</div>
+				</div>
+			</div>
+    
+     <!-- Fourth Task End -->
+    
+     <!-- Fifth Task -->
+			<div id="02_mission_05_not_completed"  class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;height: 40px;display:none;">
+				<div class="row">
+					<div class="col-xs-12">	
+						<div class="col-xs-2">
+							<i class="fas fa-store" style="font-size: 28px;margin-left: -8px;color: #ff5614;"></i>
+						</div>
+						<div class="col-xs-10">
+							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Follow "XXXXXX" Store</p>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+           <div id="02_mission_05_completed"  class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;height: 40px;border: 2px solid #41ad49;display:none;">
+				<div class="row">
+					<div class="col-xs-12">	
+						<div class="col-xs-2">
+							<i class="fas fa-store" style="font-size: 28px;margin-left: -8px;color: #ff5614;"></i>
+						</div>
+						<div class="col-xs-8">
+							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Follow "XXXXXX" Store</p>
+						</div>
+                        <div class="col-xs-2">
+							<img src="check.png" class="img-responsive" style="height: 42px;width: 100%;object-fit: contain;margin-top: -7px;margin-left: 14px;">
+						</div>
+					</div>
+				</div>
+			</div>
+    
+     <!-- Fifth Task End -->
+    
+    
+     
+</div>
+
+<div id="month_03" class="col-md-12 col-xs-12 col-sm-12" style="display: none;background:#f6f6f9;">
+		<div style="margin:40px;"></div>
+	
+    <!-- First Task -->
+		<div id="03_mission_01_not_completed" class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;height: 40px;display:none;">
+				<div class="row">
+					<div class="col-xs-12">	
+						<div class="col-xs-2">
+							<i class="far fa-lightbulb" style="font-size: 28px;margin-left: -8px;color: #ff5614;"></i>
+						</div>
+						<div class="col-xs-10">
+							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Visit dMart Page for 2 days</p>
+						</div>
+					</div>
+				</div>
+			</div>
+    
+            <div id="03_mission_01_completed" class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;height: 40px;border: 2px solid #41ad49;display:none;">
+				<div class="row">
+					<div class="col-xs-12">	
+						<div class="col-xs-2">
+							<i class="far fa-lightbulb" style="font-size: 28px;margin-left: -8px;color: #ff5614;"></i>
+						</div>
+						<div class="col-xs-8">
+							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Visit dMart Page for 2 days</p>
+						</div>
+						<div class="col-xs-2">
+							<img src="check.png" class="img-responsive" style="height: 42px;width: 100%;object-fit: contain;margin-top: -7px;margin-left: 14px;">
+						</div>
+					</div>
+				</div>
+			</div>
+	 <!-- First Task End -->
+    
+     <!-- Second Task -->
+			<div id="03_mission_02_not_completed"  class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;height: 40px;display:none;">
+				<div class="row">
+					<div class="col-xs-12">	
+						<div class="col-xs-2">
+							<i class="fas fa-shopping-basket" style="font-size: 28px;margin-left: -8px;color: #ff5614;"></i>
+						</div>
+						<div class="col-xs-10">
+							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Add 7 dMart Products to the Cart</p>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+           <div id="03_mission_02_completed"  class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;height: 40px;border: 2px solid #41ad49;display:none;">
+				<div class="row">
+					<div class="col-xs-12">	
+						<div class="col-xs-2">
+							<i class="fas fa-shopping-basket" style="font-size: 28px;margin-left: -8px;color: #ff5614;"></i>
+						</div>
+						<div class="col-xs-8">
+							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Add 7 dMart Products to the Cart</p>
+						</div>
+                        <div class="col-xs-2">
+							<img src="check.png" class="img-responsive" style="height: 42px;width: 100%;object-fit: contain;margin-top: -7px;margin-left: 14px;">
+						</div>
+					</div>
+				</div>
+			</div>
+    
+     <!-- Second Task End -->
+    
+    <!-- Third Task -->
+			<div id="03_mission_03_not_completed"  class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;height: 40px;display:none;">
+				<div class="row">
+					<div class="col-xs-12">	
+						<div class="col-xs-2">
+							<i class="far fa-credit-card" style="font-size: 28px;margin-left: -8px;color: #ff5614;"></i>
+						</div>
+						<div class="col-xs-10">
+							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Place an order on dMart</p>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+           <div id="03_mission_03_completed"  class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;height: 40px;border: 2px solid #41ad49;display:none;">
+				<div class="row">
+					<div class="col-xs-12">	
+						<div class="col-xs-2">
+							<i class="far fa-credit-card" style="font-size: 28px;margin-left: -8px;color: #ff5614;"></i>
+						</div>
+						<div class="col-xs-8">
+							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Place an order on dMart</p>
+						</div>
+                        <div class="col-xs-2">
+							<img src="check.png" class="img-responsive" style="height: 42px;width: 100%;object-fit: contain;margin-top: -7px;margin-left: 14px;">
+						</div>
+					</div>
+				</div>
+			</div>
+    
+     <!-- Third Task End -->
+    
+     <!-- Fourth Task -->
+			<div id="03_mission_04_not_completed"  class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;height: 40px;display:none;">
+				<div class="row">
+					<div class="col-xs-12">	
+						<div class="col-xs-2">
+							<i class="fas fa-user-friends" style="font-size: 28px;margin-left: -8px;color: #ff5614;"></i>
+						</div>
+						<div class="col-xs-10">
+							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Share 2 dMart Products with friends</p>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+           <div id="03_mission_04_completed"  class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;height: 40px;border: 2px solid #41ad49;display:none;">
+				<div class="row">
+					<div class="col-xs-12">	
+						<div class="col-xs-2">
+							<i class="fas fa-user-friends" style="font-size: 28px;margin-left: -8px;color: #ff5614;"></i>
+						</div>
+						<div class="col-xs-8">
+							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Share 2 dMart Products with friends</p>
+						</div>
+                        <div class="col-xs-2">
+							<img src="check.png" class="img-responsive" style="height: 42px;width: 100%;object-fit: contain;margin-top: -7px;margin-left: 14px;">
+						</div>
+					</div>
+				</div>
+			</div>
+    
+     <!-- Fourth Task End -->
+    
+     <!-- Fifth Task -->
+			<div id="03_mission_05_not_completed"  class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;height: 40px;display:none;">
+				<div class="row">
+					<div class="col-xs-12">	
+						<div class="col-xs-2">
+							<i class="fas fa-store" style="font-size: 28px;margin-left: -8px;color: #ff5614;"></i>
+						</div>
+						<div class="col-xs-10">
+							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Follow "XXXXXX" Store</p>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+           <div id="03_mission_05_completed"  class="thumbnail" style="box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.13) !important;height: 40px;border: 2px solid #41ad49;display:none;">
+				<div class="row">
+					<div class="col-xs-12">	
+						<div class="col-xs-2">
+							<i class="fas fa-store" style="font-size: 28px;margin-left: -8px;color: #ff5614;"></i>
+						</div>
+						<div class="col-xs-8">
+							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Follow "XXXXXX" Store</p>
+						</div>
+                        <div class="col-xs-2">
+							<img src="check.png" class="img-responsive" style="height: 42px;width: 100%;object-fit: contain;margin-top: -7px;margin-left: 14px;">
+						</div>
+					</div>
+				</div>
+			</div>
+    
+     <!-- Fifth Task End -->
+    
+    
+     
+</div>	
+    
+</div>
+    
+
+</body>
+<div id="myModal" class="modal fade" role="dialog" style="margin-top: 50px;">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><b style="text-transform: uppercase;">How to complete your streak</b></h4>
+      </div>
+      <div class="modal-body">
+        <p><b>Step 1</b></p>
+        <p>Log in to daraz account </p>
+        <br>
+        <p><b>Step 2</b></p>
+        <p>Enter your daraz email to track your completed streak </p>
+         <br>
+        <p><b>Step 3</b></p>
+        <p>Complete all missions to win rewards</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+    
+    
+</html>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<!-- <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script> -->
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+//nifran1989@gmail.com
+    
+let date = new Date(2020, 05, 21); 
+let shortMonth = date.toLocaleString('en-us', { month: 'short' }); /* Jun */
+let shortMonth_02 = date.toLocaleString('en-us', { month: 'short' }); /* Jun */
+//let shortMonth = "Sep";
+    
+
+ if (shortMonth == "Aug") {
+    document.getElementById('thumb_month_02').style.display = "block";
+    document.getElementById('thumb_month_02_none').style.display = "none"; 
+    document.getElementById('thumb_month_02_none_img').style.display = "none"; 
+ }else{
+    document.getElementById('thumb_month_02').style.display = "none";
+    document.getElementById('thumb_month_02_none').style.display = "block"; 
+    document.getElementById('thumb_month_02_none_img').style.display = "block"; 
+ }
+    
+ if (shortMonth_02 == "Sep") {
+    document.getElementById('thumb_month_03').style.display = "block";
+    document.getElementById('thumb_month_03_none').style.display = "none"; 
+    document.getElementById('thumb_month_03_none_img').style.display = "none"; 
+ }else{
+    document.getElementById('thumb_month_03').style.display = "none";
+    document.getElementById('thumb_month_03_none').style.display = "block"; 
+    document.getElementById('thumb_month_03_none_img').style.display = "block"; 
+ }
+    
+function foo(val) {
+    
+    
+let url = "https://apidcloud.daraz.com/mission/get-status"
+
+const payload = { venture: 'LK', email:val };
+
+    console.log("payload",payload);
+fetch(url, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(payload),
+})
+.then(response => response.json())
+.then(data => {
+    
+  console.log('Success:', data);
+  //console.log('my:', data.record.final_mission_score);
+
+  var overview = data.record.final_mission_score;
+   
+  //Month 01
+  var first_mission = data.record.mission1_status_month1; 
+  var second_mission = data.record.mission2_status_month1; 
+  var third_mission = data.record.mission3_status_month1; 
+  var fourth_mission = data.record.mission4_status_month1; 
+  var fifth_mission = data.record.mission5_status_month1; 
+    
+  //Month 02
+  var first_mission_02 = data.record.mission1_status_month2; 
+  var second_mission_02 = data.record.mission2_status_month2; 
+  var third_mission_02 = data.record.mission3_status_month2; 
+  var fourth_mission_02 = data.record.mission4_status_month2; 
+  var fifth_mission_02 = data.record.mission5_status_month2; 
+    
+  //Month 03
+  var first_mission_03 = data.record.mission1_status_month3; 
+  var second_mission_03 = data.record.mission2_status_month3; 
+  var third_mission_03 = data.record.mission3_status_month3; 
+  var fourth_mission_03 = data.record.mission4_status_month3; 
+  var fifth_mission_03 = data.record.mission5_status_month3; 
+    
+  document.getElementById("greeting").innerHTML = overview;
+    
+    
+ //Month 01
+ if (first_mission == "Completed") {
+ 	console.log("First Month - Mission 01", first_mission);
+ 	document.getElementById('mission_01_completed').style.display = "block";
+    document.getElementById('mission_01_not_completed').style.display = "none"; 
+ } else {
+ 	console.log("First Month - Mission 01", first_mission);
+ 	document.getElementById('mission_01_not_completed').style.display = "block";
+ }
+ if (second_mission == "Completed") {
+ 	console.log("First Month - Mission 02", second_mission);
+ 	document.getElementById('mission_02_completed').style.display = "block";
+    document.getElementById('mission_02_not_completed').style.display = "none";
+ } else {
+ 	console.log("First Month - Mission 02", second_mission);
+ 	document.getElementById('mission_02_not_completed').style.display = "block";
+ }
+ if (third_mission == "Completed") {
+ 	console.log("First Month - Mission 03", third_mission);
+ 	document.getElementById('mission_03_completed').style.display = "block";
+    document.getElementById('mission_03_not_completed').style.display = "none";
+ } else {
+ 	console.log("First Month - Mission 03", third_mission);
+ 	document.getElementById('mission_03_not_completed').style.display = "block";
+ }
+ if (fourth_mission == "Completed") {
+ 	console.log("First Month - Mission 04", fourth_mission);
+ 	document.getElementById('mission_04_completed').style.display = "block";
+    document.getElementById('mission_04_not_completed').style.display = "none";
+ } else {
+ 	console.log("First Month - Mission 04", fourth_mission);
+ 	document.getElementById('mission_04_not_completed').style.display = "block";
+ }
+ if (fifth_mission == "Completed") {
+ 	console.log("First Month - Mission 05", fifth_mission);
+ 	document.getElementById('mission_05_completed').style.display = "block";
+    document.getElementById('mission_05_not_completed').style.display = "none";
+ } else {
+ 	console.log("First Month - Mission 05", fifth_mission);
+ 	document.getElementById('mission_05_not_completed').style.display = "block";
+ }
+
+ //Month 02
+ if (first_mission_02 == "Completed") {
+ 	console.log("Second Month - Mission 01", first_mission_02);
+ 	document.getElementById('02_mission_01_completed').style.display = "block";
+ } else {
+ 	console.log("Second Month - Mission 01", first_mission_02);
+ 	document.getElementById('02_mission_01_not_completed').style.display = "block";
+ }
+ if (second_mission_02 == "Completed") {
+ 	console.log("Second Month - Mission 02", second_mission_02);
+ 	document.getElementById('02_mission_02_completed').style.display = "block";
+ } else {
+ 	console.log("Second Month - Mission 02", second_mission_02);
+ 	document.getElementById('02_mission_02_not_completed').style.display = "block";
+ }
+ if (third_mission_02 == "Completed") {
+ 	console.log("Second Month - Mission 03", third_mission_02);
+ 	document.getElementById('02_mission_03_completed').style.display = "block";
+ } else {
+ 	console.log("Second Month - Mission 03", third_mission_02);
+ 	document.getElementById('02_mission_03_not_completed').style.display = "block";
+ }
+ if (fourth_mission_02 == "Completed") {
+ 	console.log("Second Month - Mission 04", fourth_mission_02);
+ 	document.getElementById('02_mission_04_completed').style.display = "block";
+ } else {
+ 	console.log("Second Month - Mission 04", fourth_mission_02);
+ 	document.getElementById('02_mission_04_not_completed').style.display = "block";
+ }
+ if (fifth_mission_02== "Completed") {
+ 	console.log("Second Month - Mission 05", fifth_mission_02);
+ 	document.getElementById('02_mission_05_completed').style.display = "block";
+ } else {
+ 	console.log("Second Month - Mission 05", fifth_mission_02);
+ 	document.getElementById('02_mission_05_not_completed').style.display = "block";
+ }
+    
+//Month 03
+ if (first_mission_03== "Completed") {
+ 	console.log("Third Month - Mission 01", first_mission_03);
+ 	document.getElementById('03_mission_01_completed').style.display = "block";
+ } else {
+ 	console.log("Third Month - Mission 01", first_mission_03);
+ 	document.getElementById('03_mission_01_not_completed').style.display = "block";
+ }
+ if (second_mission_03 == "Completed") {
+ 	console.log("Third Month - Mission 02", second_mission_03);
+ 	document.getElementById('03_mission_02_completed').style.display = "block";
+ } else {
+ 	console.log("Third Month - Mission 02", second_mission_03);
+ 	document.getElementById('03_mission_02_not_completed').style.display = "block";
+ }
+ if (third_mission_03 == "Completed") {
+ 	console.log("Third Month - Mission 03", third_mission_03);
+ 	document.getElementById('03_mission_03_completed').style.display = "block";
+ } else {
+ 	console.log("Third Month - Mission 03", third_mission_03);
+ 	document.getElementById('03_mission_03_not_completed').style.display = "block";
+ }
+ if (fourth_mission_03 == "Completed") {
+ 	console.log("Third Month - Mission 04", fourth_mission_03);
+ 	document.getElementById('03_mission_04_completed').style.display = "block";
+ } else {
+ 	console.log("Third Month - Mission 04", fourth_mission_03);
+ 	document.getElementById('03_mission_04_not_completed').style.display = "block";
+ }
+ if (fifth_mission_03 == "Completed") {
+ 	console.log("Third Month - Mission 05", fifth_mission_03);
+ 	document.getElementById('03_mission_05_completed').style.display = "block";
+ } else {
+ 	console.log("Third Month - Mission 05", fifth_mission_03);
+ 	document.getElementById('03_mission_05_not_completed').style.display = "block";
+ }
+    
+    
+})
+.catch((error) => {
+  console.error('Error:', error);
+})
+    
+//var msgs = JSON.parse(data);
+//    
+//console.log(msgs);
+    
+}
+    
+function check_month_02() {
+    
+ document.getElementById("month_01").style.display = "none";
+ document.getElementById("month_03").style.display = "none";
+ document.getElementById("month_02").style.display = "block";
+ 
+ document.getElementById("thumb_month_03").style.backgroundColor = "white";
+ document.getElementById("thumb_month_03").style.color = "black";
+    
+ document.getElementById("thumb_month_01").style.backgroundColor = "white";
+ document.getElementById("thumb_month_01").style.color = "black";
+    
+ document.getElementById("thumb_month_02").style.backgroundColor = "black";
+ document.getElementById("thumb_month_02").style.color = "white";
+}
+    
+function check_month_01() {
+    
+ document.getElementById("month_01").style.display = "block";
+ document.getElementById("month_03").style.display = "none";
+ document.getElementById("month_02").style.display = "none";
+ 
+ document.getElementById("thumb_month_01").style.backgroundColor = "black";
+ document.getElementById("thumb_month_01").style.color = "white";
+    
+ document.getElementById("thumb_month_02").style.backgroundColor = "white";
+ document.getElementById("thumb_month_02").style.color = "black";
+    
+ document.getElementById("thumb_month_03").style.backgroundColor = "white";
+ document.getElementById("thumb_month_03").style.color = "black";
+}
+    
+function check_month_03() {
+    
+ document.getElementById("month_01").style.display = "none";
+ document.getElementById("month_02").style.display = "none";
+ document.getElementById("month_03").style.display = "block";
+ 
+ document.getElementById("thumb_month_01").style.backgroundColor = "white";
+ document.getElementById("thumb_month_01").style.color = "black";
+    
+ document.getElementById("thumb_month_02").style.backgroundColor = "white";
+ document.getElementById("thumb_month_02").style.color = "black";
+    
+ document.getElementById("thumb_month_03").style.backgroundColor = "black";
+ document.getElementById("thumb_month_03").style.color = "white";
+}
+</script>
