@@ -40,8 +40,8 @@
 		
 		<div class="col-xs-12">
             
-        <div class="text-center">
-        <a href="" data-toggle="modal" data-target="#myModal"><b style="font-weight: 800;text-transform: uppercase;color: #9e00ff;">Find How to complete your streak &nbsp;<i class="fas fa-external-link-alt"></i></b></a>
+        <div class="text-center" style="margin-bottom: 10px;">
+        <a href="" data-toggle="modal" data-target="#myModal" style="font-size: 13px;"><b style="font-weight: 800;text-transform: uppercase;color: #ff5722;">Find How to complete your streak &nbsp;<i class="fas fa-external-link-alt"></i></b></a>
         </div>
             
 		<img src="calendar.png" class="img-responsive" style="object-fit: contain;width: 100%;">
@@ -147,9 +147,12 @@
 						<div class="col-xs-2">
                             <img src="icons/2dmart.png" class="img-responsive" style="height: 35px;margin-left: -12px;margin-top: -3px;object-fit: contain;width: 100%;">
 						</div>
-						<div class="col-xs-10">
+						<div class="col-xs-8">
 							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Visit dMart Page for 2 days</p>
 						</div>
+                        <div class="col-xs-2">
+                            <a href="https://www.daraz.lk/dmart/" class="btn btn-danger btn-sm" style="font-weight: 600;background: #3f51b5;border-color: #3f51b5;">GO</a>
+                        </div>
 					</div>
 				</div>
 			</div>
@@ -178,9 +181,12 @@
 						<div class="col-xs-2">
 							  <img src="icons/atc.png" class="img-responsive" style="height: 35px;margin-left: -12px;margin-top: -3px;object-fit: contain;width: 100%;">
 						</div>
-						<div class="col-xs-10">
+						<div class="col-xs-8">
 							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Add 7 dMart Products to the Cart</p>
 						</div>
+                         <div class="col-xs-2">
+                            <a href="https://pages.daraz.lk/wow/gcp/daraz/channel/lk/dmart/add-7-products" class="btn btn-danger btn-sm" style="font-weight: 600;background: #3f51b5;border-color: #3f51b5;">GO</a>
+                        </div>
 					</div>
 				</div>
 			</div>
@@ -210,9 +216,12 @@
 						<div class="col-xs-2">
 							  <img src="icons/order.png" class="img-responsive" style="height: 35px;margin-left: -12px;margin-top: -3px;object-fit: contain;width: 100%;">
 						</div>
-						<div class="col-xs-10">
+						<div class="col-xs-8">
 							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Place an order on dMart</p>
 						</div>
+                         <div class="col-xs-2">
+                            <a href="https://www.daraz.lk/dmart/" class="btn btn-danger btn-sm" style="font-weight: 600;background: #3f51b5;border-color: #3f51b5;">GO</a>
+                        </div>
 					</div>
 				</div>
 			</div>
@@ -242,9 +251,12 @@
 						<div class="col-xs-2">
 							  <img src="icons/review.png" class="img-responsive" style="height: 35px;margin-left: -12px;margin-top: -3px;object-fit: contain;width: 100%;">
 						</div>
-						<div class="col-xs-10">
+						<div class="col-xs-8">
 							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Share 2 dMart Products with friends</p>
 						</div>
+                         <div class="col-xs-2">
+                            <a href="https://pages.daraz.lk/wow/gcp/daraz/channel/lk/dmart/share-dmart" class="btn btn-danger btn-sm" style="font-weight: 600;background: #3f51b5;border-color: #3f51b5;">GO</a>
+                        </div>
 					</div>
 				</div>
 			</div>
@@ -274,9 +286,12 @@
 						<div class="col-xs-2">
 							  <img src="icons/stores.png" class="img-responsive" style="height: 35px;margin-left: -12px;margin-top: -3px;object-fit: contain;width: 100%;">
 						</div>
-						<div class="col-xs-10">
+						<div class="col-xs-8">
 							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Follow Unilever brand store</p>
 						</div>
+                         <div class="col-xs-2">
+                            <a href="https://www.daraz.lk/shop/unilever-srilanka/" class="btn btn-danger btn-sm" style="font-weight: 600;background: #3f51b5;border-color: #3f51b5;">GO</a>
+                        </div>
 					</div>
 				</div>
 			</div>
@@ -746,9 +761,6 @@ fetch(url, {
   var third_mission_03 = data.record.mission3_status_month3; 
   var fourth_mission_03 = data.record.mission4_status_month3; 
   var fifth_mission_03 = data.record.mission5_status_month3; 
-    
-  document.getElementById("greeting").innerHTML = overview;
-    
     
  //Month 01
  if (first_mission == "Completed") {
