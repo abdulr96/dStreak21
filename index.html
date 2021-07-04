@@ -151,7 +151,7 @@
 							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Visit dMart Page for 2 days</p>
 						</div>
                         <div class="col-xs-2">
-                            <a href="https://www.daraz.lk/dmart/" class="btn btn-danger btn-sm" style="font-weight: 600;background: #3f51b5;border-color: #3f51b5;">GO</a>
+                            <a href="https://www.daraz.lk/dmart/" class="btn btn-danger btn-sm" style="font-weight: 600;background: #3f51b5;border-color: #3f51b5;display: none;" id="task_01_btn" target="_PARENT">GO</a>
                         </div>
 					</div>
 				</div>
@@ -185,7 +185,8 @@
 							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Add 7 dMart Products to the Cart</p>
 						</div>
                          <div class="col-xs-2">
-                            <a href="https://pages.daraz.lk/wow/gcp/daraz/channel/lk/dmart/add-7-products" class="btn btn-danger btn-sm" style="font-weight: 600;background: #3f51b5;border-color: #3f51b5;">GO</a>
+                             <p style="margin-top: 2px;background: #ffe200; width: 35px;height: 25px;padding-top: 3px;font-weight: 600;padding-left: 8px;display: none;" id="task_02_outline"><text id="task_02"></text></p>
+                            <!-- <a href="https://pages.daraz.lk/wow/gcp/daraz/channel/lk/dmart/add-7-products" class="btn btn-danger btn-sm" style="font-weight: 600;background: #3f51b5;border-color: #3f51b5;">GO</a> -->
                         </div>
 					</div>
 				</div>
@@ -220,7 +221,7 @@
 							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Place an order on dMart</p>
 						</div>
                          <div class="col-xs-2">
-                            <a href="https://www.daraz.lk/dmart/" class="btn btn-danger btn-sm" style="font-weight: 600;background: #3f51b5;border-color: #3f51b5;">GO</a>
+                            <a href="https://www.daraz.lk/dmart/" class="btn btn-danger btn-sm" style="font-weight: 600;background: #3f51b5;border-color: #3f51b5;display: none;" id="task_03_btn" target="_PARENT">GO</a>
                         </div>
 					</div>
 				</div>
@@ -255,7 +256,7 @@
 							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Share 2 dMart Products with friends</p>
 						</div>
                          <div class="col-xs-2">
-                            <a href="https://pages.daraz.lk/wow/gcp/daraz/channel/lk/dmart/share-dmart" class="btn btn-danger btn-sm" style="font-weight: 600;background: #3f51b5;border-color: #3f51b5;">GO</a>
+                            <a href="https://pages.daraz.lk/wow/gcp/daraz/channel/lk/dmart/share-dmart" class="btn btn-danger btn-sm" style="font-weight: 600;background: #3f51b5;border-color: #3f51b5;display: none;" id="task_04_btn" target="_PARENT">GO</a>
                         </div>
 					</div>
 				</div>
@@ -290,7 +291,7 @@
 							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Follow Unilever brand store</p>
 						</div>
                          <div class="col-xs-2">
-                            <a href="https://www.daraz.lk/shop/unilever-srilanka/" class="btn btn-danger btn-sm" style="font-weight: 600;background: #3f51b5;border-color: #3f51b5;" target="_blank">GO</a>
+                            <a href="https://www.daraz.lk/shop/unilever-srilanka/" class="btn btn-danger btn-sm" style="font-weight: 600;background: #3f51b5;border-color: #3f51b5;display: none;" target="_PARENT" id="task_05_btn">GO</a>
                         </div>
 					</div>
 				</div>
@@ -740,7 +741,8 @@ fetch(url, {
   //console.log('my:', data.record.final_mission_score);
 
   var overview = data.record.final_mission_score;
-   
+  document.getElementById("greeting").innerHTML = overview;
+
   //Month 01
   var first_mission = data.record.mission1_status_month1; 
   var second_mission = data.record.mission2_status_month1; 
@@ -762,6 +764,8 @@ fetch(url, {
   var fourth_mission_03 = data.record.mission4_status_month3; 
   var fifth_mission_03 = data.record.mission5_status_month3; 
     
+  document.getElementById("task_02").innerHTML = second_mission;
+    
  //Month 01
  if (first_mission == "Completed") {
  	console.log("First Month - Mission 01", first_mission);
@@ -770,14 +774,17 @@ fetch(url, {
  } else {
  	console.log("First Month - Mission 01", first_mission);
  	document.getElementById('mission_01_not_completed').style.display = "block";
+    document.getElementById('task_01_btn').style.display = "inline-block";
  }
  if (second_mission == "Completed") {
  	console.log("First Month - Mission 02", second_mission);
  	document.getElementById('mission_02_completed').style.display = "block";
-    document.getElementById('mission_02_not_completed').style.display = "none";
+    document.getElementById('task_02').style.display = "none";
+    document.getElementById('task_02_outline').style.display = "none";
  } else {
  	console.log("First Month - Mission 02", second_mission);
- 	document.getElementById('mission_02_not_completed').style.display = "block";
+ 	document.getElementById('task_02').style.display = "block";
+    document.getElementById('task_02_outline').style.display = "block";
  }
  if (third_mission == "Completed") {
  	console.log("First Month - Mission 03", third_mission);
@@ -786,6 +793,7 @@ fetch(url, {
  } else {
  	console.log("First Month - Mission 03", third_mission);
  	document.getElementById('mission_03_not_completed').style.display = "block";
+     document.getElementById('task_03_btn').style.display = "inline-block";
  }
  if (fourth_mission == "Completed") {
  	console.log("First Month - Mission 04", fourth_mission);
@@ -794,6 +802,7 @@ fetch(url, {
  } else {
  	console.log("First Month - Mission 04", fourth_mission);
  	document.getElementById('mission_04_not_completed').style.display = "block";
+     document.getElementById('task_04_btn').style.display = "inline-block";
  }
  if (fifth_mission == "Completed") {
  	console.log("First Month - Mission 05", fifth_mission);
@@ -802,6 +811,7 @@ fetch(url, {
  } else {
  	console.log("First Month - Mission 05", fifth_mission);
  	document.getElementById('mission_05_not_completed').style.display = "block";
+     document.getElementById('task_05_btn').style.display = "inline-block";
  }
 
  //Month 02
