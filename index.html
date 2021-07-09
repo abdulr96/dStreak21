@@ -260,7 +260,7 @@
 							<p style="font-size: 11px;color: gray;margin-top: 6px;margin-left: -19px;">Share 2 dMart Products with friends</p>
 						</div>
                          <div class="col-xs-2">
-                            <a href="https://pages.daraz.lk/wow/gcp/daraz/channel/lk/dmart/share-dmart" class="btn btn-danger btn-sm" style="font-weight: 600;background: #3f51b5;border-color: #3f51b5;display: none;" id="task_04_btn" target="_PARENT">GO</a>
+                             <p style="margin-top: 2px;background: #ffe200; width: 35px;height: 25px;padding-top: 3px;font-weight: 600;padding-left: 8px;display: none;" id="task_04_outline"><text id="task_04"></text></p>
                         </div>
 					</div>
 				</div>
@@ -769,6 +769,7 @@ fetch(url, {
   var fifth_mission_03 = data.record.mission5_status_month3; 
     
   document.getElementById("task_02").innerHTML = second_mission;
+  document.getElementById("task_04").innerHTML = fourth_mission;
     
  //Month 01
  if (first_mission == "Completed") {
@@ -804,10 +805,13 @@ fetch(url, {
  	console.log("First Month - Mission 04", fourth_mission);
  	document.getElementById('mission_04_completed').style.display = "block";
     document.getElementById('mission_04_not_completed').style.display = "none";
+    document.getElementById('task_04').style.display = "none";
+    document.getElementById('task_04_outline').style.display = "none";
  } else {
  	console.log("First Month - Mission 04", fourth_mission);
  	document.getElementById('mission_04_not_completed').style.display = "block";
-     document.getElementById('task_04_btn').style.display = "inline-block";
+    document.getElementById('task_04').style.display = "block";
+    document.getElementById('task_04_outline').style.display = "block";
  }
  if (fifth_mission == "Completed") {
  	console.log("First Month - Mission 05", fifth_mission);
